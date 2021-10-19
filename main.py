@@ -16,8 +16,11 @@ else:
 # set result location directory on desktop
 res_loc = os.path.join(desktop, 'qrcode')
 
+# check if the directory exists
+path_exists = os.path.exists(res_loc)
+
 # make the directory if it does not exist
-if not res_loc:
+if not path_exists:
     os.makedirs(res_loc)
 
 # ask user for text/url to generate a qrcode of
